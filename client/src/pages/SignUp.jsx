@@ -91,13 +91,19 @@ export default function SignUp() {
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className='flex gap-4'>
               <Label value='Register as Admin'/>
               <TextInput
+                className='w-4 h-4 accent-purple-600 cursor-pointer'
                 type='checkbox'
                 id='isAdmin'
                 onChange={handleChange}
               />
+              {formData.isAdmin && (
+                <p className="text-xs text-purple-600 mt-1">
+                  ✅ Admin privileges will be granted!
+                </p>
+              )}
             </div>
             <Button
               gradientDuoTone='purpleToPink'
